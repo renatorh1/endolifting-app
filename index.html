@@ -1,196 +1,180 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Endolifting UltraLift — App</title>
+  <meta name="theme-color" content="#0b0f14"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Endolifting App">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- iOS icons (pon tus png en /icons) -->
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+
+  <style>
+    :root{--bg:#0b0f14;--card:#121826;--muted:#8aa0b6;--text:#e7eef7;--border:rgba(255,255,255,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
+    header{padding:18px 16px;border-bottom:1px solid var(--border)}
+    h1{margin:0 0 6px;font-size:18px}
+    .sub{color:var(--muted);font-size:13px}
+    main{padding:14px 16px;display:grid;gap:12px}
+    .card{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:14px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .btn{border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700}
+    .btn.active{border-color:rgba(255,255,255,.25)}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    th,td{padding:10px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:top}
+    th{background:rgba(255,255,255,.04);text-align:left}
+    tr:last-child td{border-bottom:none}
+    label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}
+    input{width:100%;padding:10px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.25);color:var(--text)}
+    .kpi{display:grid;grid-template-columns:1fr;gap:10px}
+    .big{font-size:16px;font-weight:900;margin:0}
+    .small{color:var(--muted);font-size:12px;margin:6px 0 0}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Endolifting UltraLift — App&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="theme-color" content="#0b0f14"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="apple-mobile-web-app-title" content="Endolifting App"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="manifest" href="manifest.webmanifest"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- iOS icons (pon tus png en /icons) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="apple-touch-icon" href="icons/icon-180.png"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{--bg:#0b0f14;--card:#121826;--muted:#8aa0b6;--text:#e7eef7;--border:rgba(255,255,255,.08)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body{margin:0;font-family:-apple-system,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header{padding:18px 16px;border-bottom:1px solid var(--border)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0 0 6px;font-size:18px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.sub{color:var(--muted);font-size:13px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main{padding:14px 16px;display:grid;gap:12px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.active{border-color:rgba(255,255,255,.25)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:12px;overflow:hidden}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>th,td{padding:10px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:top}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>th{background:rgba(255,255,255,.04);text-align:left}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>tr:last-child td{border-bottom:none}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>input{width:100%;padding:10px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.25);color:var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.kpi{display:grid;grid-template-columns:1fr;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.big{font-size:16px;font-weight:900;margin:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.small{color:var(--muted);font-size:12px;margin:6px 0 0}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Endolifting UltraLift — App (BioTech 980/1470)&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub"&gt;Acordeón práctico en tu idioma: W + ms + Hz · mapas · biotipos · calculadora de energía.&lt;/div&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn active" id="bMixto" onclick="setBio('mixto')"&gt;Mixto&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" id="bDelgado" onclick="setBio('delgado')"&gt;Delgado&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" id="bGraso" onclick="setBio('graso')"&gt;Graso&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="kpi" style="margin-top:10px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="big" id="prioridad"&gt;1470 base + 980 selectivo&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="small" id="explica"&gt;Mejilla: preservar volumen. 980 sobre todo en jowls/submentón si sobra grasa.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="big"&gt;Parámetros por zona (tu máquina)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="small"&gt;Basado en el protocolo del PDF, traducido a tu control real. :contentReference[oaicite:0]{index=0}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;&lt;th&gt;Zona&lt;/th&gt;&lt;th&gt;Recomendación&lt;/th&gt;&lt;th&gt;Pasadas&lt;/th&gt;&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;&lt;b&gt;Periorbitario&lt;/b&gt;&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;1470 ON · 2–3 W · 20–40 ms · 2–4 Hz · 980 OFF&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td id="pPeri"&gt;2–4&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;&lt;b&gt;Tercio medio/inferior&lt;/b&gt;&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;F1 1470: 4–5 W · 30–50 ms · 3–5 Hz&lt;br&gt;F2 980 (selectivo): 4–6 W · 60–100 ms · 5–10 Hz&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td id="pMedio"&gt;3–6&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;&lt;b&gt;Cuello/submentón&lt;/b&gt;&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;1470 + 980 · 4–5 W · 40–60 ms · 3–6 Hz · criss-cross&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td id="pCuello"&gt;4–6&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/tbody&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="big"&gt;Calculadora rápida&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="small"&gt;Energía = W × tiempo. Fluencia promedio ≈ Energía / área.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:grid;gap:10px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Potencia (W)&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="W" type="number" value="4" step="0.1" min="0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Tiempo (segundos)&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="T" type="number" value="300" step="1" min="0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;Área tratada (cm²)&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input id="A" type="number" value="20" step="1" min="1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn" onclick="calc()"&gt;Calcular&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card" style="border-style:dashed"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;b&gt;Energía:&lt;/b&gt; &lt;span id="outJ"&gt;—&lt;/span&gt; J&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;b&gt;Fluencia:&lt;/b&gt; &lt;span id="outF"&gt;—&lt;/span&gt; J/cm²&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="big"&gt;Mapa rápido (texto)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="small"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Punto 1 preauricular → mandíbula/jowls/surco.&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Punto 2 cigoma lateral (selectivo) → mejilla si hay grasa.&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Punto 3 periorbita lateral → microtúneles cortos.&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Cuello → criss-cross homogéneo. :contentReference[oaicite:1]{index=1}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="big"&gt;Instalación en iPhone/iPad&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="small"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Abre esta app en Safari → botón Compartir → &lt;b&gt;Agregar a pantalla de inicio&lt;/b&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Queda como app y funciona offline.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>let bio='mixto';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>function setBio(v){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>bio=v;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>bMixto.classList.toggle('active', v==='mixto');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>bDelgado.classList.toggle('active', v==='delgado');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>bGraso.classList.toggle('active', v==='graso');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const prioridad = document.getElementById('prioridad');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const explica = document.getElementById('explica');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>if(v==='delgado'){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>prioridad.textContent='1470 dominante · 980 mínimo';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>explica.textContent='Objetivo: tensar sin vaciar. 980 en exceso envejece la cara.';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pPeri.textContent='2–4';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pMedio.textContent='3–4';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pCuello.textContent='3–5';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}else if(v==='graso'){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>prioridad.textContent='980 protagonista + 1470 soporte';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>explica.textContent='Objetivo: reducir volumen + retracción. 980 más presente en jowls/submentón/cuello.';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pPeri.textContent='2–4';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pMedio.textContent='4–7';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pCuello.textContent='5–8';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}else{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>prioridad.textContent='1470 base + 980 selectivo';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>explica.textContent='Mejilla: preservar volumen. 980 donde sobra grasa (jowls/submentón).';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pPeri.textContent='2–4';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pMedio.textContent='3–6';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pCuello.textContent='4–6';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>function calc(){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const W = parseFloat(document.getElementById('W').value||'0');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const T = parseFloat(document.getElementById('T').value||'0');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const A = parseFloat(document.getElementById('A').value||'1');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const J = W*T;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const F = J/A;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outJ.textContent = isFinite(J) ? J.toFixed(0) : '—';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outF.textContent = isFinite(F) ? F.toFixed(0) : '—';</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>calc();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Service worker (offline)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>if('serviceWorker' in navigator){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navigator.serviceWorker.register('./sw.js');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<header>
+  <h1>Endolifting UltraLift — App (BioTech 980/1470)</h1>
+  <div class="sub">Acordeón práctico en tu idioma: W + ms + Hz · mapas · biotipos · calculadora de energía.</div>
+</header>
+
+<main>
+  <section class="card">
+    <div class="row">
+      <button class="btn active" id="bMixto" onclick="setBio('mixto')">Mixto</button>
+      <button class="btn" id="bDelgado" onclick="setBio('delgado')">Delgado</button>
+      <button class="btn" id="bGraso" onclick="setBio('graso')">Graso</button>
+    </div>
+    <div class="kpi" style="margin-top:10px">
+      <div>
+        <p class="big" id="prioridad">1470 base + 980 selectivo</p>
+        <p class="small" id="explica">Mejilla: preservar volumen. 980 sobre todo en jowls/submentón si sobra grasa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="big">Parámetros por zona (tu máquina)</p>
+    <p class="small">Basado en el protocolo del PDF, traducido a tu control real. :contentReference[oaicite:0]{index=0}</p>
+    <table>
+      <thead>
+        <tr><th>Zona</th><th>Recomendación</th><th>Pasadas</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Periorbitario</b></td>
+          <td>1470 ON · 2–3 W · 20–40 ms · 2–4 Hz · 980 OFF</td>
+          <td id="pPeri">2–4</td>
+        </tr>
+        <tr>
+          <td><b>Tercio medio/inferior</b></td>
+          <td>F1 1470: 4–5 W · 30–50 ms · 3–5 Hz<br>F2 980 (selectivo): 4–6 W · 60–100 ms · 5–10 Hz</td>
+          <td id="pMedio">3–6</td>
+        </tr>
+        <tr>
+          <td><b>Cuello/submentón</b></td>
+          <td>1470 + 980 · 4–5 W · 40–60 ms · 3–6 Hz · criss-cross</td>
+          <td id="pCuello">4–6</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <p class="big">Calculadora rápida</p>
+    <p class="small">Energía = W × tiempo. Fluencia promedio ≈ Energía / área.</p>
+    <div style="display:grid;gap:10px">
+      <div>
+        <label>Potencia (W)</label>
+        <input id="W" type="number" value="4" step="0.1" min="0">
+      </div>
+      <div>
+        <label>Tiempo (segundos)</label>
+        <input id="T" type="number" value="300" step="1" min="0">
+      </div>
+      <div>
+        <label>Área tratada (cm²)</label>
+        <input id="A" type="number" value="20" step="1" min="1">
+      </div>
+      <button class="btn" onclick="calc()">Calcular</button>
+      <div class="card" style="border-style:dashed">
+        <div><b>Energía:</b> <span id="outJ">—</span> J</div>
+        <div><b>Fluencia:</b> <span id="outF">—</span> J/cm²</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="big">Mapa rápido (texto)</p>
+    <p class="small">
+      Punto 1 preauricular → mandíbula/jowls/surco.<br>
+      Punto 2 cigoma lateral (selectivo) → mejilla si hay grasa.<br>
+      Punto 3 periorbita lateral → microtúneles cortos.<br>
+      Cuello → criss-cross homogéneo. :contentReference[oaicite:1]{index=1}
+    </p>
+  </section>
+
+  <section class="card">
+    <p class="big">Instalación en iPhone/iPad</p>
+    <p class="small">
+      Abre esta app en Safari → botón Compartir → <b>Agregar a pantalla de inicio</b>.
+      Queda como app y funciona offline.
+    </p>
+  </section>
+</main>
+
+<script>
+  let bio='mixto';
+
+  function setBio(v){
+    bio=v;
+    bMixto.classList.toggle('active', v==='mixto');
+    bDelgado.classList.toggle('active', v==='delgado');
+    bGraso.classList.toggle('active', v==='graso');
+
+    const prioridad = document.getElementById('prioridad');
+    const explica = document.getElementById('explica');
+
+    if(v==='delgado'){
+      prioridad.textContent='1470 dominante · 980 mínimo';
+      explica.textContent='Objetivo: tensar sin vaciar. 980 en exceso envejece la cara.';
+      pPeri.textContent='2–4';
+      pMedio.textContent='3–4';
+      pCuello.textContent='3–5';
+    }else if(v==='graso'){
+      prioridad.textContent='980 protagonista + 1470 soporte';
+      explica.textContent='Objetivo: reducir volumen + retracción. 980 más presente en jowls/submentón/cuello.';
+      pPeri.textContent='2–4';
+      pMedio.textContent='4–7';
+      pCuello.textContent='5–8';
+    }else{
+      prioridad.textContent='1470 base + 980 selectivo';
+      explica.textContent='Mejilla: preservar volumen. 980 donde sobra grasa (jowls/submentón).';
+      pPeri.textContent='2–4';
+      pMedio.textContent='3–6';
+      pCuello.textContent='4–6';
+    }
+  }
+
+  function calc(){
+    const W = parseFloat(document.getElementById('W').value||'0');
+    const T = parseFloat(document.getElementById('T').value||'0');
+    const A = parseFloat(document.getElementById('A').value||'1');
+    const J = W*T;
+    const F = J/A;
+    outJ.textContent = isFinite(J) ? J.toFixed(0) : '—';
+    outF.textContent = isFinite(F) ? F.toFixed(0) : '—';
+  }
+  calc();
+
+  // Service worker (offline)
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./sw.js');
+  }
+</script>
 </body>
 </html>
